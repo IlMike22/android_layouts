@@ -1,6 +1,5 @@
 package com.raywenderlich.android.octomembers.ui.teammembers
 
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_item_team_member.view.*
 
 class TeamMemberAdapter(var members: List<Member>) : RecyclerView.Adapter<TeamMemberAdapter.TeamMemberViewHolder>() {
-
     override fun onBindViewHolder(holder: TeamMemberViewHolder, position: Int) = holder.bind(members[position])
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamMemberViewHolder {

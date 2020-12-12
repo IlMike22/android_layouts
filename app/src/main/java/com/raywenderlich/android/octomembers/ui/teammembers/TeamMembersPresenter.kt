@@ -7,7 +7,10 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class TeamMembersPresenter(val repository: Repository, val view: TeamMembersContract.View) : TeamMembersContract.Presenter {
+class TeamMembersPresenter(
+        val repository: Repository,
+        val view: TeamMembersContract.View
+) : TeamMembersContract.Presenter {
     override fun retrieveAllMembers(teamName: String) {
         showViewLoadingState()
         repository.retrieveTeamMembers(teamName, object : Callback<List<Member>> {
@@ -49,7 +52,7 @@ class TeamMembersPresenter(val repository: Repository, val view: TeamMembersCont
         view.enableInput()
     }
 
-    private fun showEmptyState(teamName:String) {
+    private fun showEmptyState(teamName: String) {
         view.showEmptyState(teamName)
     }
 
