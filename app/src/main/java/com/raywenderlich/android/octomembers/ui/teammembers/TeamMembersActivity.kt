@@ -15,7 +15,6 @@ import kotlinx.android.synthetic.main.activity_team_members.*
 
 
 class TeamMembersActivity : AppCompatActivity(), TeamMembersContract.View {
-
     lateinit var presenter: TeamMembersContract.Presenter
     lateinit var adapter: TeamMemberAdapter
 

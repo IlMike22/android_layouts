@@ -31,7 +31,9 @@ class TeamMemberAdapter(var members: List<Member>) : RecyclerView.Adapter<TeamMe
         fun bind(member: Member) {
             this.member = member
             itemView.teamMemberLogin.text = member.login
+
             Picasso.get().load(member.avatarUrl).into(itemView.teamMemberAvatar)
+
             itemView.teamMemberType.text = member.type
         }
 
